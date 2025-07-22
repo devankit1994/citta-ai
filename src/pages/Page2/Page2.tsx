@@ -1,5 +1,5 @@
 import React from "react";
-import Breadcrumbs from "../components/Breadcrumb/Breadcrumbs";
+import Breadcrumbs from "../../components/Breadcrumb/Breadcrumbs";
 
 const Page2: React.FC = () => (
   <>

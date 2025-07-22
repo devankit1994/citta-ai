@@ -1,6 +1,6 @@
 import type { RouteObject } from "react-router-dom";
 import Page1 from "../pages/Page1/Page1";
-import Page2 from "../pages/Page2";
+import Page2 from "../pages/Page2/Page2";
 
 const routes: RouteObject[] = [
   {

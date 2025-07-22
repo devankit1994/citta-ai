@@ -20,14 +20,13 @@ const Page1: React.FC = () => {
       label: "Teams & Microsoft 365 groups",
       content: <TeamsAndMicrosoft365Groups />,
     },
-    { label: "Distribution list", content: <div>Hello from Tab 2</div> },
+    {
+      label: "Distribution list",
+      content: <>Distribution list content goes here...</>,
+    },
     {
       label: "Security groups",
-      content: (
-        <div>
-          Tab 3 with <b>JSX</b>
-        </div>
-      ),
+      content: <>Security groups content goes here...</>,
     },
   ];
 
@@ -49,25 +48,23 @@ const Page1: React.FC = () => {
           <span>Where to store files</span>
         </div>
       </div>
-      <div className="page1__tabs-row">
+      <div className="page1__relative">
         <Tab
           tabs={tabs}
           selectedIndex={selectedIndex}
           onTabSelect={setSelectedIndex}
         />
-        <div>
-          <CittaInput
-            value={searchValue}
-            onChange={setSearchValue}
-            placeholder="Search all teams and groups"
-            className="input--bordered page1__input--large"
-            icon={
-              <span className="header__icon--flipped">
-                <Search24Regular className="page1__icon page1__icon--brand" />
-              </span>
-            }
-          />
-        </div>
+        <CittaInput
+          value={searchValue}
+          onChange={setSearchValue}
+          placeholder="Search all teams and groups"
+          className="input--bordered page1__input--large page1__input-absolute"
+          icon={
+            <span className="header__icon--flipped">
+              <Search24Regular className="page1__icon page1__icon--brand" />
+            </span>
+          }
+        />
       </div>
     </>
   );

@@ -2,9 +2,19 @@
   --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --text-primary: #222;
   --bg-primary: #fff;
+  --brand-blue: #0078d4;
+
+  /* Standard gray shades */
+  --gray1: #f9fafb;
+  --gray2: #f3f4f6;
+  --gray3: #e5e7eb;
+  --gray4: #d1d5db;
+  --gray5: #9ca3af;
+  --gray6: #6b7280;
+  --gray7: #4b5563;
   --gray8: #888;
-  --sidebar-bg: #f3f2f1;
-  --brand-blue: #0078D4;
+  --gray9: #374151;
+  --gray10: #111827;
 }
 
 body {

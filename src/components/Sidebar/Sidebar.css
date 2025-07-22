@@ -1,5 +1,5 @@
 .app__sidebar {
-  background: var(--sidebar-bg);
+  background: var(--gray2);
   transition: width 0.2s;
   padding-top: 6px;
   overflow-y: auto;

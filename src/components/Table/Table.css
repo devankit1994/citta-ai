@@ -1,0 +1,23 @@
+.ag-theme-alpine .ag-root-wrapper {
+  border: none;
+  box-shadow: none;
+}
+
+.ag-theme-alpine .ag-header,
+.ag-theme-alpine .ag-row {
+  background: var(--bg-primary);
+}
+
+.ag-theme-alpine .ag-header {
+  border-bottom: none;
+}
+
+.ag-theme-alpine .ag-header-cell,
+.ag-theme-alpine .ag-cell {
+  border-bottom: 1px solid var(--gray2);
+}
+
+.ag-theme-alpine .ag-header-cell-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+}

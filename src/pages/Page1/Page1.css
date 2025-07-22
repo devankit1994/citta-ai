@@ -22,3 +22,21 @@
   min-width: 280px;
   font-weight: 500;
 }
+
+.page1__icon-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page1__relative {
+  position: relative;
+}
+
+.page1__input-absolute {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  box-sizing: unset !important;
+  max-width: 280px;
+}

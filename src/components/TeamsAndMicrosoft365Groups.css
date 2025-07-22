@@ -1,4 +1,4 @@
-/* .teams-groups__flex-row {
+.teams-groups__flex-row {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -16,10 +16,12 @@
 .teams-groups__tabs-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
 }
 
 .teams-groups__icon-label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-} */
+}
