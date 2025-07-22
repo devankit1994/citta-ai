@@ -1,0 +1,24 @@
+.page1__flex-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page1__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.page1__icon--brand {
+  color: var(--brand-blue);
+}
+.page1__tabs-row {
+  display: flex;
+  justify-content: space-between;
+}
+.page1__input--large input {
+  min-height: 38px;
+  min-width: 280px;
+  font-weight: 500;
+}

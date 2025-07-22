@@ -1,0 +1,13 @@
+:root {
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --text-primary: #222;
+  --bg-primary: #fff;
+  --gray8: #888;
+  --sidebar-bg: #f3f2f1;
+  --brand-blue: #0078D4;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+}

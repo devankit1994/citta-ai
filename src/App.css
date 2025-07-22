@@ -1,0 +1,9 @@
+.app__flex-container {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+.app__main-content {
+  padding: 12px 42px;
+  flex: 1;
+}

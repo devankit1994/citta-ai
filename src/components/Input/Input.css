@@ -1,0 +1,37 @@
+.citta-input__field {
+  width: 100%;
+}
+
+.citta-input__field input {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding-left: 42px;
+  padding-right: 12px;
+  border-radius: 4px;
+}
+
+.citta-input__field input::placeholder {
+  color: var(--gray8);
+}
+
+.citta-input__field .fui-Input__contentBefore {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--gray8);
+}
+
+.citta-input__icon {
+  display: flex;
+}
+
+.citta-input__icon svg {
+  width: 20px;
+}
+
+.input--bordered {
+  border: 1px solid var(--gray8) !important;
+}
