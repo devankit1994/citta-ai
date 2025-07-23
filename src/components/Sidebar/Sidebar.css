@@ -3,6 +3,7 @@
   transition: width 0.2s;
   padding-top: 6px;
   overflow-y: auto;
+  height: 100vh;
 }
 
 .app__sidebar--collapsed {
