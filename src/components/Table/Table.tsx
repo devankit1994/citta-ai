@@ -3,7 +3,11 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./Table.css";
-import { ModuleRegistry, AllCommunityModule } from "ag-grid-community";
+import {
+  ModuleRegistry,
+  AllCommunityModule,
+  type DomLayoutType,
+} from "ag-grid-community";
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 import type { TableProps } from "./Table.types";
@@ -11,10 +15,13 @@ import type { TableProps } from "./Table.types";
 export const Table: React.FC<TableProps> = ({
   className = "",
   style = {},
-  defaultColDef,
   ...agGridProps
 }) => {
-  const mergedDefaultColDef = { resizable: false, ...(defaultColDef || {}) };
+  const defaultColDef = {
+    resizable: false,
+    suppressMovable: true,
+    suppressSizeToFit: true,
+  };
 
   return (
     <div
@@ -23,7 +30,8 @@ export const Table: React.FC<TableProps> = ({
     >
       <AgGridReact
         theme="legacy"
-        defaultColDef={mergedDefaultColDef}
+        defaultColDef={defaultColDef}
+        domLayout={"autoHeight" as DomLayoutType}
         {...agGridProps}
       />
     </div>

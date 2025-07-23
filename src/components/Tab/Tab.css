@@ -2,9 +2,10 @@
   gap: 2rem;
 }
 
-.citta-tab{
+.citta-tab {
   font-size: 1rem;
   padding: 6px 4px !important;
+  font-size: 0.85em !important;
 }
 
 .citta-tab[aria-selected="true"] {
@@ -12,6 +13,6 @@
   border-bottom: 2px solid var(--brand-blue);
 }
 
-.tab-content{
+.tab-content {
   padding: 1rem 0;
 }

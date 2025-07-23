@@ -1,0 +1,15 @@
+.page2__container {
+  margin-bottom: 1.75rem;
+}
+
+.page2__description {
+  font-size: 0.85em;
+  max-width: 68%;
+  margin-bottom: 0;
+}
+
+.page2__link {
+  color: var(--brand-blue);
+  font-size: 0.85em;
+  cursor: pointer;
+}

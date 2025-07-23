@@ -20,7 +20,7 @@ import {
   Edit24Regular,
   Edit24Filled,
 } from "@fluentui/react-icons";
-import CopilotIcon from "../../icons/copilot.svg?react";
+import CopilotIcon from "../../assets/copilot.svg?react";
 
 const navItems = [
   {

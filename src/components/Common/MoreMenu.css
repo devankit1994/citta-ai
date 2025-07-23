@@ -1,0 +1,8 @@
+.more-menu__trigger {
+  cursor: pointer;
+}
+
+.more-menu__popover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+}
