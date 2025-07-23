@@ -21,7 +21,7 @@ export const CittaInput: React.FC<CittaInputProps> = ({
   className,
   ...inputProps
 }) => {
-  const handleChange: InputProps["onChange"] = (ev, data) => {
+  const handleChange: InputProps["onChange"] = (_ev, data) => {
     onChange(data.value);
   };
 
@@ -33,7 +33,7 @@ export const CittaInput: React.FC<CittaInputProps> = ({
       contentBefore={
         icon ? <span className="citta-input__icon">{icon}</span> : undefined
       }
-      className={`citta-input__field${className ? ' ' + className : ''}`}
+      className={`citta-input__field${className ? " " + className : ""}`}
       {...inputProps}
     />
   );
