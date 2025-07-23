@@ -33,7 +33,12 @@ const MoreMenu: React.FC<MoreMenuProps> = ({
           role="button"
           className="more-menu__trigger"
         >
-          <MoreVertical24Regular className={iconClassName} aria-hidden="true" />
+          <MoreVertical24Regular
+            className={["more-menu__icon", iconClassName]
+              .filter(Boolean)
+              .join(" ")}
+            aria-hidden="true"
+          />
         </span>
       </MenuTrigger>
       <MenuPopover className="more-menu__popover">

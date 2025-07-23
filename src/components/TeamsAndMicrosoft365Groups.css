@@ -5,8 +5,8 @@
 }
 
 .teams-groups__icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .teams-groups__icon--brand {
@@ -17,11 +17,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.75rem;
+  margin: 1.5rem 0;
+  border-top: 2px solid var(--gray3);
+  padding-top: 0.5rem;
 }
 
 .teams-groups__icon-label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.85em;
+}
+
+.teams-groups__items-count {
+  font-size: 0.85em;
 }

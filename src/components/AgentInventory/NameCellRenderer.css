@@ -32,13 +32,6 @@
   cursor: pointer;
 }
 
-.name-cell-renderer__menu-icon {
-  color: var(--gray5);
-  width: 16px;
-  height: 16px;
-  gap: 0;
-}
-
 .name-cell-renderer__menu-item {
   padding: 8px 16px;
   cursor: pointer;

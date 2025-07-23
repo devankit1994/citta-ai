@@ -1,8 +1,75 @@
 .more-menu__trigger {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+
+.more-menu__trigger:hover,
+.more-menu__trigger:focus {
+  background: rgba(0, 0, 0, 0.06);
+  outline: none;
 }
 
 .more-menu__popover {
+  background: #fff !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
-  padding: 0 !important;
+  border-radius: 8px !important;
+  min-width: 160px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.more-menu__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.more-menu__icon {
+  color: var(--gray5);
+  width: 16px;
+  height: 16px;
+  gap: 0;
+}
+
+.more-menu__item:hover,
+.more-menu__item:focus {
+  background: #f5f5f5;
+  color: #0078d4;
+  outline: none;
+}
+
+.more-menu__item:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.more-menu__popover .fui-MenuDivider {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 4px 0;
+  height: 0;
+}
+
+.more-menu__popover .fui-MenuItem {
+  font-size: 0.85em;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  min-height: 0;
+}
+
+.more-menu__popover .fui-MenuDivider {
+  margin: 2px 0;
 }

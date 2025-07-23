@@ -54,17 +54,19 @@ const Page1: React.FC = () => {
           selectedIndex={selectedIndex}
           onTabSelect={setSelectedIndex}
         />
-        <CittaInput
-          value={searchValue}
-          onChange={setSearchValue}
-          placeholder="Search all teams and groups"
-          className="input--bordered page1__input--large page1__input-absolute"
-          icon={
-            <span className="header__icon--flipped">
-              <Search24Regular className="page1__icon page1__icon--brand" />
-            </span>
-          }
-        />
+        {selectedIndex === 0 && (
+          <CittaInput
+            value={searchValue}
+            onChange={setSearchValue}
+            placeholder="Search all teams and groups"
+            className="input--bordered page1__input--large page1__input-absolute"
+            icon={
+              <span className="header__icon--flipped">
+                <Search24Regular className="page1__icon page1__icon--brand" />
+              </span>
+            }
+          />
+        )}
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import type { ICellRendererParams } from "ag-grid-community";
 import type { AgentInventoryRow } from "./AgentInventory.types";
 import "./NameCellRenderer.css";
+import { MenuItem, MenuDivider } from "@fluentui/react-components";
 import MoreMenu from "../Common/MoreMenu";
 
 const NameCellRenderer: React.FC<ICellRendererParams<AgentInventoryRow>> = (
@@ -23,9 +24,10 @@ const NameCellRenderer: React.FC<ICellRendererParams<AgentInventoryRow>> = (
         </p>
       </div>
       <div className="name-cell-renderer__menu">
-        <MoreMenu iconClassName="name-cell-renderer__menu-icon">
-          <div className="name-cell-renderer__menu-item">Action 1</div>
-          <div className="name-cell-renderer__menu-item">Action 2</div>
+        <MoreMenu>
+          <MenuItem>Action 1</MenuItem>
+          <MenuDivider />
+          <MenuItem>Action 2</MenuItem>
         </MoreMenu>
       </div>
     </div>
