@@ -1,5 +1,7 @@
 :root {
   --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size: 0.85em;
+
   --text-primary: #222;
   --bg-primary: #fff;
   --brand-blue: #0078d4;

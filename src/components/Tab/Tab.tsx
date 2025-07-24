@@ -1,7 +1,18 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import { TabList, Tab as FluentTab } from "@fluentui/react-components";
-import type { TabProps } from "./Tab.types";
 import "./Tab.css";
+
+interface TabItem {
+  label: string;
+  content: ReactNode;
+}
+
+interface TabProps {
+  tabs: TabItem[];
+  selectedIndex: number;
+  onTabSelect: (index: number) => void;
+  className?: string;
+}
 
 export const Tab: React.FC<TabProps> = ({
   tabs,

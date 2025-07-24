@@ -10,7 +10,7 @@ import {
 } from "@fluentui/react-icons";
 import "./ActiveTeamsAndGroups.css";
 import { CittaInput } from "../../components/Input/Input";
-import TeamsAndMicrosoft365Groups from "../../components/TeamsAndMicrosoft365Groups";
+import TeamsAndMicrosoft365Groups from "../../components/TeamsAndMicrosoft365Groups/TeamsAndMicrosoft365Groups";
 import IconWithLabel from "../../components/Common/IconWithLabel/IconWithLabel";
 
 const ActiveTeamsAndGroups: React.FC = () => {

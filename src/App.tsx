@@ -4,7 +4,7 @@ import { Header } from "./components/Header/Header";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { useRoutes } from "react-router-dom";
 import routes from "./routes/routes";
-import { FloatingLinks } from "./components/FloatingLinks/FloatingLinks";
+import { FloatingLinks } from "./components/Common/FloatingLinks/FloatingLinks";
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);

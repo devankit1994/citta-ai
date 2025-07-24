@@ -8,16 +8,16 @@ import {
 } from "@fluentui/react-icons";
 import React from "react";
 import { MenuItem, MenuDivider } from "@fluentui/react-components";
-import MoreMenu from "./Common/MoreMenu";
+import MoreMenu from "../Common/MoreMenu/MoreMenu";
 import "./TeamsAndMicrosoft365Groups.css";
-import "../styles/layout.css";
-import Table from "./Table/Table";
+import "../../styles/layout.css";
+import Table from "../Table/Table";
 import type {
   ColDef,
   SortDirection,
   ICellRendererParams,
 } from "ag-grid-community";
-import IconWithLabel from "./Common/IconWithLabel/IconWithLabel";
+import IconWithLabel from "../Common/IconWithLabel/IconWithLabel";
 
 const NameCellRenderer: React.FC<ICellRendererParams> = (params) => {
   return (

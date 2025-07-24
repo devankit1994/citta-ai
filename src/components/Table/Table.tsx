@@ -1,5 +1,5 @@
-import React from "react";
-import { AgGridReact } from "ag-grid-react";
+import React, { type CSSProperties } from "react";
+import { AgGridReact, type AgGridReactProps } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./Table.css";
@@ -10,7 +10,10 @@ import {
 } from "ag-grid-community";
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-import type { TableProps } from "./Table.types";
+interface TableProps extends AgGridReactProps {
+  className?: string;
+  style?: CSSProperties;
+}
 
 export const Table: React.FC<TableProps> = ({
   className = "",

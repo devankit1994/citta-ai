@@ -1,9 +1,19 @@
 import React from "react";
 import type { ICellRendererParams } from "ag-grid-community";
-import type { AgentInventoryRow } from "./AgentInventory.types";
 import "./NameCellRenderer.css";
 import { MenuItem, MenuDivider } from "@fluentui/react-components";
-import MoreMenu from "../Common/MoreMenu";
+import MoreMenu from "../../Common/MoreMenu/MoreMenu";
+
+type AgentInventoryRow = {
+  nameTitle: string;
+  nameDescription: string;
+  type: string;
+  availability: string;
+  supportedIn: string;
+  dateCreated: string;
+  publisher: string;
+  icon: string;
+};
 
 const NameCellRenderer: React.FC<ICellRendererParams<AgentInventoryRow>> = (
   params

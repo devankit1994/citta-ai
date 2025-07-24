@@ -1,6 +1,11 @@
 import React from "react";
 import type { ICellRendererParams } from "ag-grid-community";
-import { copilotIcon, ms365Icon, outlookIcon, teamsIcon } from "./icons";
+import {
+  copilotIcon,
+  ms365Icon,
+  outlookIcon,
+  teamsIcon,
+} from "../../Common/brandIcons";
 
 const ICON_MAP: Record<string, { src: string; alt: string }> = {
   Copilot: { src: copilotIcon, alt: "Copilot" },

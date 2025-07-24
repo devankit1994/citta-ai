@@ -6,7 +6,7 @@ import {
   nowIcon,
   onePageIcon,
   confluenceIcon,
-} from "./icons";
+} from "../Common/brandIcons";
 import {
   ArrowClockwise24Regular,
   CloudArrowDown24Regular,
@@ -14,10 +14,10 @@ import {
   Filter24Regular,
 } from "@fluentui/react-icons";
 import Table from "../Table/Table";
-import NameCellRenderer from "./NameCellRenderer";
-import HeaderWithIcon from "../Table/HeaderWithIcon";
-import AvailabilityCellRenderer from "./AvailabilityCellRenderer";
-import SupportedInCellRenderer from "./SupportedInCellRenderer";
+import NameCellRenderer from "./CellRenderers/NameCellRenderer";
+import HeaderWithIcon from "../Table/components/HeaderWithIcon";
+import AvailabilityCellRenderer from "./CellRenderers/AvailabilityCellRenderer";
+import SupportedInCellRenderer from "./CellRenderers/SupportedInCellRenderer";
 import type { SortDirection } from "ag-grid-community";
 import "./AgentInventory.css";
 import "../../styles/layout.css";

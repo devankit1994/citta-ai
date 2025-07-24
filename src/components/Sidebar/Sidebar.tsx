@@ -2,9 +2,18 @@ import "./Sidebar.css";
 import { Nav, NavItem } from "@fluentui/react-components";
 import { navItems, LineHorizontal324Regular } from "./navItems";
 import { ChevronUpRegular, ChevronDownRegular } from "@fluentui/react-icons";
-import type { SidebarProps } from "./Sidebar.types";
-import React, { useState, useEffect } from "react";
+import React, {
+  useState,
+  useEffect,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
+interface SidebarProps {
+  collapsed: boolean;
+  setCollapsed: Dispatch<SetStateAction<boolean>>;
+}
 
 export const Sidebar: React.FC<SidebarProps> = ({
   collapsed,
