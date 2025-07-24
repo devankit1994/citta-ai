@@ -38,12 +38,11 @@ const navItems = [
       {
         key: "copilot-overview",
         text: "Overview",
-        url: "/page1",
       },
       {
         key: "copilot-agents",
         text: "Agents & connectors",
-        url: "/page2",
+        url: "/agents-and-connectors",
       },
       {
         key: "copilot-billing",
@@ -88,6 +87,7 @@ const navItems = [
       {
         key: "teams-active",
         text: "Active teams & groups",
+        url: "/active-teams-and-groups",
       },
       {
         key: "teams-policies",

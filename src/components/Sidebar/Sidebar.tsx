@@ -4,6 +4,7 @@ import { navItems, LineHorizontal324Regular } from "./navItems";
 import { ChevronUpRegular, ChevronDownRegular } from "@fluentui/react-icons";
 import type { SidebarProps } from "./Sidebar.types";
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Sidebar: React.FC<SidebarProps> = ({
   collapsed,
@@ -12,6 +13,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const [expandedSections, setExpandedSections] = useState<
     Record<string, boolean>
   >({});
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSectionToggle = (key: string) => {
     setExpandedSections((prev) => ({
@@ -25,10 +28,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
       .filter((item) => item.isSection)
       .map((item) => item.key);
 
-    const firstExpandableSection = navItems.find(
-      (item) =>
-        item.isSection && Array.isArray(item.items) && item.items.length > 0
-    );
+    let activeSectionKey: string | null = null;
+    navItems.forEach((item) => {
+      if (item.isSection && Array.isArray(item.items)) {
+        if (
+          item.items.some(
+            (subItem) => subItem.url && subItem.url === location.pathname
+          )
+        ) {
+          activeSectionKey = item.key;
+        }
+      }
+    });
 
     if (collapsed) {
       const collapsedSections: Record<string, boolean> = {};
@@ -36,14 +47,26 @@ export const Sidebar: React.FC<SidebarProps> = ({
         collapsedSections[key] = false;
       });
       setExpandedSections(collapsedSections);
-    } else if (firstExpandableSection) {
+    } else if (activeSectionKey) {
       const expandedSections: Record<string, boolean> = {};
       sectionKeys.forEach((key) => {
-        expandedSections[key] = key === firstExpandableSection.key;
+        expandedSections[key] = key === activeSectionKey;
       });
       setExpandedSections(expandedSections);
+    } else {
+      const firstExpandableSection = navItems.find(
+        (item) =>
+          item.isSection && Array.isArray(item.items) && item.items.length > 0
+      );
+      if (firstExpandableSection) {
+        const expandedSections: Record<string, boolean> = {};
+        sectionKeys.forEach((key) => {
+          expandedSections[key] = key === firstExpandableSection.key;
+        });
+        setExpandedSections(expandedSections);
+      }
     }
-  }, [collapsed]);
+  }, [collapsed, location.pathname]);
 
   return (
     <aside
@@ -95,29 +118,52 @@ export const Sidebar: React.FC<SidebarProps> = ({
               {item.items &&
                 expandedSections[item.key] &&
                 item.items.map((subItem) => (
-                  <NavItem
-                    as="button"
+                  <div
+                    className="sidebar__nav-item--indented"
                     key={subItem.key}
-                    value={subItem.key}
-                    className={`sidebar__nav-item${
-                      collapsed ? " sidebar__nav-item--collapsed" : ""
-                    } sidebar__nav-item--indented`}
                   >
-                    {!collapsed && subItem.text}
-                  </NavItem>
+                    <NavItem
+                      as="button"
+                      key={subItem.key}
+                      value={subItem.key}
+                      className={`sidebar__nav-item${
+                        collapsed ? " sidebar__nav-item--collapsed" : ""
+                      } ${
+                        subItem.url === location.pathname
+                          ? " sidebar__nav-item--active"
+                          : ""
+                      }`}
+                      onClick={
+                        subItem.url ? () => navigate(subItem.url) : undefined
+                      }
+                    >
+                      {!collapsed && subItem.text}
+                    </NavItem>
+                  </div>
                 ))}
             </div>
           ) : (
-            <NavItem
-              as="button"
-              key={item.key}
-              value={item.key}
-              className={`sidebar__nav-item${
-                collapsed ? " sidebar__nav-item--collapsed" : ""
-              }`}
-            >
-              {!collapsed && item.text}
-            </NavItem>
+            (() => {
+              let url: string | undefined = undefined;
+              if ("url" in item && typeof item.url === "string") url = item.url;
+              return (
+                <NavItem
+                  as="button"
+                  key={item.key}
+                  value={item.key}
+                  className={`sidebar__nav-item${
+                    collapsed ? " sidebar__nav-item--collapsed" : ""
+                  }${
+                    url && url === location.pathname
+                      ? " sidebar__nav-item--active"
+                      : ""
+                  }`}
+                  onClick={url ? () => navigate(url) : undefined}
+                >
+                  {!collapsed && item.text}
+                </NavItem>
+              );
+            })()
           )
         )}
       </Nav>

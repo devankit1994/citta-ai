@@ -3,9 +3,9 @@ import Breadcrumbs from "../../components/Breadcrumb/Breadcrumbs";
 import AgentInventory from "../../components/AgentInventory/AgentInventory";
 import { Tab } from "../../components/Tab/Tab";
 import { WeatherMoon24Regular } from "@fluentui/react-icons";
-import "./Page2.css";
+import "./AgenetsAndConnectors.css";
 
-const Page2: React.FC = () => {
+const AgenetsAndConnectors: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const tabs = [
     {
@@ -48,4 +48,4 @@ const Page2: React.FC = () => {
   );
 };
 
-export default Page2;
+export default AgenetsAndConnectors;

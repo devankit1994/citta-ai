@@ -8,11 +8,11 @@ import {
   Search24Regular,
   WeatherMoon24Regular,
 } from "@fluentui/react-icons";
-import "./Page1.css";
+import "./ActiveTeamsAndGroups.css";
 import { CittaInput } from "../../components/Input/Input";
 import TeamsAndMicrosoft365Groups from "../../components/TeamsAndMicrosoft365Groups";
 
-const Page1: React.FC = () => {
+const ActiveTeamsAndGroups: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [searchValue, setSearchValue] = React.useState("");
 
@@ -79,4 +79,4 @@ const Page1: React.FC = () => {
   );
 };
 
-export default Page1;
+export default ActiveTeamsAndGroups;
