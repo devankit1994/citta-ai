@@ -1,13 +1,13 @@
-import asanaIcon from "../../assets/asana.svg";
-import vivaGoalsIcon from "../../assets/viva-goals.png";
-import meetingIcon from "../../assets/meeting.png";
-import nowIcon from "../../assets/now.svg";
-import onePageIcon from "../../assets/1page.svg";
-import confluenceIcon from "../../assets/confluence.png";
-import copilotIcon from "../../assets/copilot.svg";
-import outlookIcon from "../../assets/outlook.png";
-import teamsIcon from "../../assets/teams.png";
-import ms365Icon from "../../assets/ms365.png";
+import asanaIcon from "../../assets/brands/asana.svg";
+import vivaGoalsIcon from "../../assets/brands/viva-goals.png";
+import meetingIcon from "../../assets/brands/meeting.png";
+import nowIcon from "../../assets/brands/now.svg";
+import onePageIcon from "../../assets/brands/1page.svg";
+import confluenceIcon from "../../assets/brands/confluence.png";
+import copilotIcon from "../../assets/brands/copilot.svg";
+import outlookIcon from "../../assets/brands/outlook.png";
+import teamsIcon from "../../assets/brands/teams.png";
+import ms365Icon from "../../assets/brands/ms365.png";
 
 export {
   asanaIcon,

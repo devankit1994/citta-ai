@@ -1,6 +1,6 @@
 import type { RouteObject } from "react-router-dom";
 import ActiveTeamsAndGroups from "../pages/ActiveTeamsAndGroups/ActiveTeamsAndGroups";
-import AgenetsAndConnectors from "../pages/AgenetsAndConnectors/AgenetsAndConnectors";
+import AgentsAndConnectors from "../pages/AgentsAndConnectors/AgentsAndConnectors";
 
 const routes: RouteObject[] = [
   {
@@ -9,7 +9,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/agents-and-connectors",
-    element: <AgenetsAndConnectors />,
+    element: <AgentsAndConnectors />,
   },
 ];
 
