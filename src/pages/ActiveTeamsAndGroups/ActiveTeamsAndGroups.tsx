@@ -11,6 +11,7 @@ import {
 import "./ActiveTeamsAndGroups.css";
 import { CittaInput } from "../../components/Input/Input";
 import TeamsAndMicrosoft365Groups from "../../components/TeamsAndMicrosoft365Groups";
+import IconWithLabel from "../../components/Common/IconWithLabel/IconWithLabel";
 
 const ActiveTeamsAndGroups: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -35,25 +36,22 @@ const ActiveTeamsAndGroups: React.FC = () => {
     <>
       <div className="page1__header-row">
         <Breadcrumbs items={["Home", "Active teams & groups"]} />
-        <span className="page1__darkmode-toggle">
-          <WeatherMoon24Regular className="page1__icon page1__icon--brand" />
-          <span>Enable dark mode</span>
-        </span>
+        <IconWithLabel
+          icon={<WeatherMoon24Regular />}
+          label="Enable dark mode"
+        />
       </div>
       <h1>Active teams and groups</h1>
-      <div className="page1__flex-row">
-        <div className="page1__icon-label">
-          <Lightbulb24Regular className="page1__icon page1__icon--brand" />
-          <span>About Groups</span>
-        </div>
-        <div className="page1__icon-label">
-          <PeopleTeam24Regular className="page1__icon page1__icon--brand" />
-          <span>Using Teams And SharePoint</span>
-        </div>
-        <div className="page1__icon-label">
-          <CloudArrowDown24Regular className="page1__icon page1__icon--brand" />
-          <span>Where to store files</span>
-        </div>
+      <div className="page1__flex-row flex-items">
+        <IconWithLabel icon={<Lightbulb24Regular />} label="About Groups" />
+        <IconWithLabel
+          icon={<PeopleTeam24Regular />}
+          label="Using Teams And SharePoint"
+        />
+        <IconWithLabel
+          icon={<CloudArrowDown24Regular />}
+          label="Where to store files"
+        />
       </div>
       <div className="page1__relative">
         <Tab
@@ -69,7 +67,7 @@ const ActiveTeamsAndGroups: React.FC = () => {
             className="input--bordered page1__input--large page1__input-absolute"
             icon={
               <span className="header__icon--flipped">
-                <Search24Regular className="page1__icon page1__icon--brand" />
+                <Search24Regular />
               </span>
             }
           />

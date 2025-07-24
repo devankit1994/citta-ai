@@ -1,34 +1,3 @@
-.teams-groups__flex-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.teams-groups__icon {
-  width: 16px;
-  height: 16px;
-}
-
-.teams-groups__icon--brand {
-  color: var(--brand-blue);
-}
-
-.teams-groups__tabs-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1.5rem 0;
-  border-top: 2px solid var(--gray3);
-  padding-top: 0.5rem;
-}
-
-.teams-groups__icon-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85em;
-}
-
 .teams-groups__items-count {
   font-size: 0.85em;
 }

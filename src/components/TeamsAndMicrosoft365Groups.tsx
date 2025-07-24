@@ -10,12 +10,14 @@ import React from "react";
 import { MenuItem, MenuDivider } from "@fluentui/react-components";
 import MoreMenu from "./Common/MoreMenu";
 import "./TeamsAndMicrosoft365Groups.css";
+import "../styles/layout.css";
 import Table from "./Table/Table";
 import type {
   ColDef,
   SortDirection,
   ICellRendererParams,
 } from "ag-grid-community";
+import IconWithLabel from "./Common/IconWithLabel/IconWithLabel";
 
 const NameCellRenderer: React.FC<ICellRendererParams> = (params) => {
   return (
@@ -167,31 +169,19 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
 
   return (
     <>
-      <div className="teams-groups__tabs-row">
-        <div className="teams-groups__flex-row">
-          <div className="teams-groups__icon-label">
-            <Add24Regular className="teams-groups__icon teams-groups__icon--brand" />
-            <span>Add a team</span>
-          </div>
-          <div className="teams-groups__icon-label">
-            <Add24Regular className="teams-groups__icon teams-groups__icon--brand" />
-            <span>Add a Microsoft 365 group</span>
-          </div>
-          <div className="teams-groups__icon-label">
-            <CloudArrowDown24Regular className="teams-groups__icon teams-groups__icon--brand" />
-            <span>Export</span>
-          </div>
-          <div className="teams-groups__icon-label">
-            <ArrowClockwise24Regular className="teams-groups__icon teams-groups__icon--brand" />
-            <span>Refresh</span>
-          </div>
+      <div className="actions-bar">
+        <div className="flex-items">
+          <IconWithLabel icon={<Add24Regular />} label="Add a team" />
+          <IconWithLabel
+            icon={<Add24Regular />}
+            label="Add a Microsoft 365 group"
+          />
+          <IconWithLabel icon={<CloudArrowDown24Regular />} label="Export" />
+          <IconWithLabel icon={<ArrowClockwise24Regular />} label="Refresh" />
         </div>
-        <div className="teams-groups__flex-row">
+        <div className="flex-items">
           <span className="teams-groups__items-count">8 items</span>
-          <div className="teams-groups__icon-label">
-            <Filter24Regular className="teams-groups__icon teams-groups__icon--brand" />
-            <span>Filter</span>
-          </div>
+          <IconWithLabel icon={<Filter24Regular />} label="Filter" />
         </div>
       </div>
       <Table

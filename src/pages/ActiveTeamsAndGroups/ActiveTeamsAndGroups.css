@@ -1,7 +1,4 @@
 .page1__flex-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -23,13 +20,6 @@
   font-weight: 500;
 }
 
-.page1__icon-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95em;
-}
-
 .page1__relative {
   position: relative;
 }
@@ -46,13 +36,4 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.page1__darkmode-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: inherit;
-  font-size: 0.85rem;
-  cursor: pointer;
 }

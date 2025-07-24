@@ -1,0 +1,17 @@
+.icon-with-label__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.icon-with-label__icon--brand svg {
+  color: var(--brand-blue);
+}
+
+.icon-with-label__icon svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+}

@@ -1,0 +1,25 @@
+.filter-pills__bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.filter-pills__label {
+  font-weight: 500;
+  margin-right: 8px;
+  font-size: 0.85em;
+}
+
+.filter-pills__pill {
+  padding: 6px 18px;
+  border-radius: 20px;
+  background: var(--gray2);
+  border: none;
+  font-size: 0.75em;
+  color: var(--gray9);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+}

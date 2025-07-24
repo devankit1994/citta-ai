@@ -4,6 +4,7 @@ import AgentInventory from "../../components/AgentInventory/AgentInventory";
 import { Tab } from "../../components/Tab/Tab";
 import { WeatherMoon24Regular } from "@fluentui/react-icons";
 import "./AgentsAndConnectors.css";
+import IconWithLabel from "../../components/Common/IconWithLabel/IconWithLabel";
 
 const AgentsAndConnectors: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -22,10 +23,10 @@ const AgentsAndConnectors: React.FC = () => {
     <>
       <div className="page1__header-row">
         <Breadcrumbs items={["Home", "Agents & connectors"]} />
-        <span className="page1__darkmode-toggle">
-          <WeatherMoon24Regular className="page1__icon page1__icon--brand" />
-          <span>Enable dark mode</span>
-        </span>
+        <IconWithLabel
+          icon={<WeatherMoon24Regular />}
+          label="Enable dark mode"
+        />
       </div>
       <div className="page2__container">
         <h1>Agents & connectors</h1>

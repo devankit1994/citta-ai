@@ -1,0 +1,14 @@
+.actions-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  border-top: 2px solid var(--gray3);
+  padding-top: 0.5rem;
+}
+
+.flex-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

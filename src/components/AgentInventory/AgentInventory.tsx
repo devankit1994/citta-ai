@@ -20,7 +20,10 @@ import AvailabilityCellRenderer from "./AvailabilityCellRenderer";
 import SupportedInCellRenderer from "./SupportedInCellRenderer";
 import type { SortDirection } from "ag-grid-community";
 import "./AgentInventory.css";
+import "../../styles/layout.css";
 import { CittaInput } from "../Input/Input";
+import FilterPills from "../Common/FilterPills/FilterPills";
+import IconWithLabel from "../Common/IconWithLabel/IconWithLabel";
 
 const columnDefs = [
   {
@@ -130,18 +133,15 @@ const AgentInventory: React.FC = () => {
 
   return (
     <>
-      <div className="agent-inventory__actions-bar">
-        <div className="agent-inventory__flex-row">
-          <div className="agent-inventory__icon-label agent-inventory__action-btn">
-            <ArrowClockwise24Regular className="agent-inventory__icon agent-inventory__icon--brand" />
-            <span>Refresh</span>
-          </div>
-          <div className="agent-inventory__icon-label agent-inventory__action-btn">
-            <CloudArrowDown24Regular className="agent-inventory__icon agent-inventory__icon--brand" />
-            <span>Export to Excel</span>
-          </div>
+      <div className="actions-bar">
+        <div className="flex-items">
+          <IconWithLabel icon={<ArrowClockwise24Regular />} label="Refresh" />
+          <IconWithLabel
+            icon={<CloudArrowDown24Regular />}
+            label="Export to Excel"
+          />
         </div>
-        <div className="agent-inventory__flex-row">
+        <div className="flex-items">
           <span className="agent-inventory__items-count">
             {rowData.length} items
           </span>
@@ -162,14 +162,9 @@ const AgentInventory: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="agent-inventory__filter-bar">
-        <span className="agent-inventory__filter-label">Filters:</span>
-        {filterLabels.map((label) => (
-          <button key={label} className="agent-inventory__pill">
-            {label}
-          </button>
-        ))}
-      </div>
+
+      <FilterPills filterLabels={filterLabels} />
+
       <Table columnDefs={columnDefs} rowData={rowData} rowHeight={64} />
     </>
   );
