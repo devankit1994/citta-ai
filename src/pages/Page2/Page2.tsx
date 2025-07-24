@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumbs from "../../components/Breadcrumb/Breadcrumbs";
 import AgentInventory from "../../components/AgentInventory/AgentInventory";
 import { Tab } from "../../components/Tab/Tab";
+import { WeatherMoon24Regular } from "@fluentui/react-icons";
 import "./Page2.css";
 
 const Page2: React.FC = () => {
@@ -19,7 +20,13 @@ const Page2: React.FC = () => {
 
   return (
     <>
-      <Breadcrumbs items={["Home", "Agents & connectors"]} />
+      <div className="page1__header-row">
+        <Breadcrumbs items={["Home", "Agents & connectors"]} />
+        <span className="page1__darkmode-toggle">
+          <WeatherMoon24Regular className="page1__icon page1__icon--brand" />
+          <span>Enable dark mode</span>
+        </span>
+      </div>
       <div className="page2__container">
         <h1>Agents & connectors</h1>
         <p className="page2__description">

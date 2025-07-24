@@ -1,7 +1,7 @@
 .teams-groups__flex-row {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .teams-groups__icon {

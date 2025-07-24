@@ -27,7 +27,7 @@ const columnDefs = [
     headerName: "Name",
     field: "name",
     cellRenderer: NameCellRenderer,
-    minWidth: 560,
+    flex: 1,
   },
   {
     headerName: "Type",
@@ -46,15 +46,14 @@ const columnDefs = [
     headerName: "Supported in",
     field: "supportedIn",
     cellRenderer: SupportedInCellRenderer,
-    minWidth: 180,
   },
   {
     headerName: "Date created",
     field: "dateCreated",
     sort: "desc" as SortDirection,
-    maxWidth: 160,
+    maxWidth: 140,
   },
-  { headerName: "Publisher", field: "publisher" },
+  { headerName: "Publisher", field: "publisher", maxWidth: 160 },
 ];
 
 const rowData = [

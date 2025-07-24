@@ -1,13 +1,13 @@
 .page1__flex-row {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .page1__icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .page1__icon--brand {
@@ -40,4 +40,19 @@
   top: 0;
   box-sizing: unset !important;
   max-width: 280px;
+}
+
+.page1__header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page1__darkmode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
 }

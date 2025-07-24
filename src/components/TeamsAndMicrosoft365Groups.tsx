@@ -57,7 +57,7 @@ const CreatedOnCellRenderer: React.FC<ICellRendererParams> = (params) => {
   const [date, time] = params.value.split(" at ");
   return (
     <span style={{ lineHeight: 1.5, display: "flex", alignItems: "center" }}>
-      {date}
+      {date} at
       <br />
       {time}
     </span>
@@ -68,14 +68,14 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
   const columnDefs: ColDef[] = [
     {
       headerName: "",
-      maxWidth: 4,
+      maxWidth: 2,
     },
     {
       headerName: "Name",
       field: "name",
       sort: "asc" as SortDirection,
       cellRenderer: NameCellRenderer,
-      minWidth: 240,
+      flex: 1,
     },
     { headerName: "Email", field: "email" },
     {
@@ -92,18 +92,19 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
     {
       headerName: "Membership type",
       field: "membershipType",
-      maxWidth: 160,
+      maxWidth: 140,
     },
     { headerName: "Privacy", field: "privacy", maxWidth: 120 },
     {
       headerName: "Created on",
       field: "createdOn",
       cellRenderer: CreatedOnCellRenderer,
-      maxWidth: 180,
+      maxWidth: 140,
     },
     {
       headerName: "☰ Choose columns",
       field: "chooseColumns",
+      maxWidth: 140,
     },
   ];
 
@@ -115,6 +116,7 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
       membershipType: "Assigned",
       privacy: "Public",
       createdOn: "February 1, 2020 at 10:41 PM",
+      chooseColumns: "",
     },
     {
       name: "docs",
@@ -123,6 +125,7 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
       membershipType: "Assigned",
       privacy: "Private",
       createdOn: "August 20, 2020 at 4:09 PM",
+      chooseColumns: "",
     },
     {
       name: "Documents",
@@ -131,6 +134,7 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
       membershipType: "Assigned",
       privacy: "Private",
       createdOn: "July 18, 2021 at 11:12 AM",
+      chooseColumns: "",
     },
     {
       name: "Licensing",
@@ -139,6 +143,7 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
       membershipType: "Assigned",
       privacy: "Private",
       createdOn: "January 23, 2024 at 2:08 PM",
+      chooseColumns: "",
     },
     {
       name: "Professional Services",
@@ -147,6 +152,7 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
       membershipType: "Assigned",
       privacy: "Public",
       createdOn: "October 8, 2024 at 12:45 AM",
+      chooseColumns: "",
     },
     {
       name: "team",
@@ -155,6 +161,7 @@ const TeamsAndMicrosoft365Groups: React.FC = () => {
       membershipType: "Assigned",
       privacy: "Private",
       createdOn: "February 14, 2020 at 7:07 PM",
+      chooseColumns: "",
     },
   ];
 

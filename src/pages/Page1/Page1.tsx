@@ -6,6 +6,7 @@ import {
   PeopleTeam24Regular,
   CloudArrowDown24Regular,
   Search24Regular,
+  WeatherMoon24Regular,
 } from "@fluentui/react-icons";
 import "./Page1.css";
 import { CittaInput } from "../../components/Input/Input";
@@ -32,7 +33,13 @@ const Page1: React.FC = () => {
 
   return (
     <>
-      <Breadcrumbs items={["Home", "Active teams & groups"]} />
+      <div className="page1__header-row">
+        <Breadcrumbs items={["Home", "Active teams & groups"]} />
+        <span className="page1__darkmode-toggle">
+          <WeatherMoon24Regular className="page1__icon page1__icon--brand" />
+          <span>Enable dark mode</span>
+        </span>
+      </div>
       <h1>Active teams and groups</h1>
       <div className="page1__flex-row">
         <div className="page1__icon-label">
