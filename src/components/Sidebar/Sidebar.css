@@ -70,6 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 8px !important;
 }
 
 .sidebar__toggle-btn svg {
